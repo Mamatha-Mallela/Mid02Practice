@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JuH-me-BD8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oUC-84-4ck">
+            <objects>
+                <tabBarController id="JuH-me-BD8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2SJ-7k-O12">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="p6P-kv-EPt" kind="relationship" relationship="viewControllers" id="gQ4-6m-1E9"/>
+                        <segue destination="8FR-GC-8IR" kind="relationship" relationship="viewControllers" id="CM2-BQ-ezM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZj-DW-ngg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1241" y="-135"/>
+        </scene>
+        <!--slider-->
+        <scene sceneID="uay-sT-Eet">
+            <objects>
+                <navigationController id="p6P-kv-EPt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="slider" image="slider.horizontal.3" catalog="system" id="fMA-nc-Cbg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KSO-Ny-wx9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9aI-G8-nkS" kind="relationship" relationship="rootViewController" id="YRv-Aw-pyH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhr-WN-wnj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="-134"/>
+        </scene>
+        <!--DatePicker-->
+        <scene sceneID="Ig8-oZ-Gxw">
+            <objects>
+                <navigationController id="8FR-GC-8IR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DatePicker" image="pin.fill" catalog="system" id="7h3-Xl-k0C"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VYZ-gq-KDE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D4r-iF-Phk" kind="relationship" relationship="rootViewController" id="h2h-2a-3z1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2A-fr-fvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-462" y="588"/>
+        </scene>
+        <!--DateVC-->
+        <scene sceneID="M4G-yS-HWv">
+            <objects>
+                <viewController id="D4r-iF-Phk" customClass="DateVC" customModule="Mid02Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8p3-XQ-rdf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GMf-Kk-xpc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PickerValue" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EdT-Pn-084">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xx8-jt-DGR">
+                                        <rect key="frame" x="0.0" y="367" width="414" height="358"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2PB-y2-44u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GMf-Kk-xpc" firstAttribute="leading" secondItem="8p3-XQ-rdf" secondAttribute="leading" id="2Xt-pl-Em9"/>
+                            <constraint firstItem="GMf-Kk-xpc" firstAttribute="top" secondItem="2PB-y2-44u" secondAttribute="top" id="XZj-Ri-enD"/>
+                            <constraint firstItem="2PB-y2-44u" firstAttribute="bottom" secondItem="GMf-Kk-xpc" secondAttribute="bottom" id="aAC-zm-NsQ"/>
+                            <constraint firstItem="2PB-y2-44u" firstAttribute="trailing" secondItem="GMf-Kk-xpc" secondAttribute="trailing" id="dnO-XM-m0X"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="faQ-E5-yyq"/>
+                    <connections>
+                        <outlet property="pickerView" destination="Xx8-jt-DGR" id="fwM-lm-LbK"/>
+                        <outlet property="pickerViewAction" destination="Xx8-jt-DGR" id="jMD-fc-mLi"/>
+                        <outlet property="picketTV" destination="EdT-Pn-084" id="Ado-8v-Eqb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXY-VN-77C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="586"/>
+        </scene>
+        <!--SliderVC-->
+        <scene sceneID="elt-QJ-4ML">
+            <objects>
+                <viewController id="9aI-G8-nkS" customClass="sliderVC" customModule="Mid02Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTj-Q9-Ipo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OG6-zQ-3p8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nib-n0-HPr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-ka-db4">
+                                        <rect key="frame" x="-2" y="366.5" width="418" height="359.5"/>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="9aI-G8-nkS" eventType="valueChanged" id="Iv5-5g-GHk"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FcF-bb-9VW"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="FcF-bb-9VW" firstAttribute="trailing" secondItem="OG6-zQ-3p8" secondAttribute="trailing" id="Cuy-lH-Bo7"/>
+                            <constraint firstItem="OG6-zQ-3p8" firstAttribute="leading" secondItem="FcF-bb-9VW" secondAttribute="leading" id="RBa-b8-CR5"/>
+                            <constraint firstItem="OG6-zQ-3p8" firstAttribute="top" secondItem="FcF-bb-9VW" secondAttribute="top" id="Y1C-bG-p4T"/>
+                            <constraint firstItem="FcF-bb-9VW" firstAttribute="bottom" secondItem="OG6-zQ-3p8" secondAttribute="bottom" id="iuu-KD-ChB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yQq-N6-4KW"/>
+                    <connections>
+                        <outlet property="sliderView" destination="ZGa-ka-db4" id="pei-za-fyZ"/>
+                        <outlet property="valueTF" destination="nib-n0-HPr" id="sem-Tx-UBx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4X0-im-mwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="-135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pin.fill" catalog="system" width="119" height="128"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
